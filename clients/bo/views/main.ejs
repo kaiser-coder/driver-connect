@@ -187,17 +187,17 @@
 					</a>
 				</li>
 				<li>
-					<a href="/booking/create">
+					<a href="/app/booking/create">
 						<span class="link-title">Réserver</span>
 						<i class="mdi mdi-bookmark link-icon"></i>
 					</a>
 				</li>
 				<li>
-					<a href="#booking" data-toggle="collapse" aria-expanded="false">
+					<a href="#order" data-toggle="collapse" aria-expanded="false">
 						<span class="link-title">Commandes</span>
 						<i class="mdi mdi-book-open-variant link-icon"></i>
 					</a>
-					<ul class="collapse navigation-submenu" id="booking">
+					<ul class="collapse navigation-submenu" id="order">
 						<li>
 							<a href="" target="_blank">Dispatche</a>
 						</li>
@@ -205,7 +205,7 @@
 							<a href="" target="_blank">Liste des réservations</a>
 						</li>
 						<li>
-							<a href="/booking/create" target="_blank">Réserver</a>
+							<a href="/app/booking/create" target="_blank">Réserver</a>
 						</li>
 					</ul>
 				</li>
@@ -338,7 +338,7 @@
 		<div class="page-content-wrapper">
 			<div class="page-content-wrapper-inner">
 				<div class="content-viewport">
-					<%- include('./partials/' + viewFile) %>
+					<%- include(viewFile) %>
 				</div>
 			</div>
 
