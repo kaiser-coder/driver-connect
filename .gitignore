@@ -1,1 +1,34 @@
 clients/bo/node_modules/*
+
+# yarn error logs
+clients/bo/yarn-error.log
+
+# Environment varibales
+clients/bo/.env*
+clients/bo/!.env*.example
+
+# Code coverage
+clients/bo/coverage
+
+clients/bo/.husky/*
+clients/bo/bin/*
+clients/bo/.dockerignore
+clients/bo/.eslintignore
+clients/bo/.eslintrc.json
+clients/bo/.lintstagedrc.json
+clients/bo/.prettierignore
+clients/bo/.prettierrc.json
+clients/bo/.travis.yml
+clients/bo/Dockerfile
+clients/bo/LICENSE
+clients/bo/jest.config.js
+clients/bo/ecosystem.config.json
+clients/bo/CHANGELOG.md
+clients/bo/CODE_OF_PRODUCT.md
+clients/bo/CONTRIBUTING.md
+clients/bo/README.md
+clients/bo/docker-compose.dev.yml
+clients/bo/docker-compose.prod.yml
+clients/bo/docker-compose.test.yml
+clients/bo/docker-compose.yml
+
