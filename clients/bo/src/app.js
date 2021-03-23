@@ -14,6 +14,7 @@ const routes = require('./routes/v1');
 const appRoutes = require('./routes/app');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
+const session = require('express-session');
 
 const app = express();
 
@@ -21,6 +22,17 @@ if (config.env !== 'test') {
 	app.use(morgan.successHandler);
 	app.use(morgan.errorHandler);
 }
+
+// Express session
+app.set(' trust proxy ', 1);
+app.use(
+	session({
+		secret: 'driverconnect',
+		resave: false,
+		saveUninitialized: false,
+		cookie: { secure: false },
+	})
+);
 
 // Engine view
 app.set('view engine', 'ejs');
@@ -59,6 +71,8 @@ if (config.env === 'production') {
 
 // v1 api routes
 app.use('/v1', routes);
+
+// App Routes
 app.use('/app', appRoutes);
 
 // send back a 404 error for any unknown api request

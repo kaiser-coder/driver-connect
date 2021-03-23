@@ -10,7 +10,10 @@
 	<link rel="stylesheet" href="/public/vendors/iconfonts/mdi/css/materialdesignicons.css" />
 	<link rel="stylesheet" href="/public/css/shared/style.css" />
 	<link rel="stylesheet" href="/public/css/demo_1/style.css" />
-	<link rel="shortcut icon" href="/public/images/favicon.ico" />
+
+	<!-- Plugin -->
+	<link rel="stylesheet" href="/public/js/plugins/select2/select2.min.css">
+	<link rel="stylesheet" href="/public/js/plugins/DataTables/css/dataTables.bootstrap4.min.css">
 </head>
 
 <body class="header-fixed">
@@ -187,7 +190,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="/app/booking/create">
+					<a href="/app/booking/create/step1">
 						<span class="link-title">Réserver</span>
 						<i class="mdi mdi-bookmark link-icon"></i>
 					</a>
@@ -202,10 +205,10 @@
 							<a href="" target="_blank">Dispatche</a>
 						</li>
 						<li>
-							<a href="" target="_blank">Liste des réservations</a>
+							<a href="/app/booking/list" target="_blank">Liste des réservations</a>
 						</li>
 						<li>
-							<a href="/app/booking/create" target="_blank">Réserver</a>
+							<a href="/app/booking/create/step1" target="_blank">Réserver</a>
 						</li>
 					</ul>
 				</li>
@@ -341,31 +344,26 @@
 					<%- include(viewFile) %>
 				</div>
 			</div>
-
-			<footer class="footer">
-				<div class="row">
-					<div class="col-sm-6 text-center text-sm-right order-sm-1">
-						<ul class="text-gray">
-							<li><a href="#">Terms of use</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-					<div class="col-sm-6 text-center text-sm-left mt-3 mt-sm-0">
-						<small class="text-muted d-block">Copyright © 2019
-							<a href="http://www.uxcandy.co" target="_blank">UXCANDY</a>. All rights reserved</small>
-						<small class="text-gray mt-2">Handcrafted With
-							<i class="mdi mdi-heart text-danger"></i></small>
-					</div>
-				</div>
-			</footer>
 			<!-- partial -->
 		</div>
 	</div>
 
-	<script src="./assets/js/angular.min.js"></script>
+	<!-- Template -->
+	<script src="/public/js/plugins/jquery-3.6.0.js"></script>
 	<script src="/public/vendors/js/core.js"></script>
 	<script src="/public/vendors/apexcharts/apexcharts.min.js"></script>
 	<script src="/public/js/template.js"></script>
+
+	<!-- AngularJS -->
+	<script src="/public/js/plugins/angular-1.5.0/angular.min.js"></script>
+
+	<!-- Select plugin -->
+	<script src="/public/js/plugins/select2/select2.min.js" charset="utf-8"></script>
+	<script src="/public/js/plugins/app.js" charset="utf-8"></script>
+
+	<!-- DataTable plugin -->
+	<script src="/public/js/plugins/DataTables/js/jquery.dataTables.min.js"></script>
+	<script src="/public/js/plugins/DataTables/js/dataTables.bootstrap4.min.js"></script>
 </body>
 
 </html>
