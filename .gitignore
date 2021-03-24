@@ -9,3 +9,6 @@ clients/bo/!.env*.example
 
 # Code coverage
 clients/bo/coverage
+
+# Readme boilerplate
+clients/bo/README.md
