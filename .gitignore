@@ -11,4 +11,4 @@ clients/bo/!.env*.example
 clients/bo/coverage
 
 # Readme boilerplate
-./bo/README.md
+./clients/bo/README.md
