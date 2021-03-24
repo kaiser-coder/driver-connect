@@ -1,19 +1,20 @@
-/**
- * ========== Chauffeurs ==========
- */
+const layout = 'main';
+const viewPath = 'partials/drivers/';
 
-const Driver = require('../models/Driver');
+const setViewFile = (viewFile) => {
+	return viewPath + viewFile;
+};
 
 const list = (req, res) => {
-	res.send('Liste des chauffeurs');
+	res.render(layout, { viewFile: setViewFile('list') });
 };
 
 const create = (req, res) => {
-	res.send('Formulaire d\'ajout de chauffeur');
-} 
+	res.send("Formulaire d'ajout de chauffeur");
+};
 
 const store = (req, res) => {
 	res.send('Enregistrement');
-}
+};
 
-module.exports = {list, create, store};
+module.exports = { list, create, store };
