@@ -1,0 +1,262 @@
+<% if(step == 'step1') { %>
+	<div id="step1">
+		<div class="row">
+			<div class="col-12 py-5">
+				<h4>Formulaire de réservation</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="grid">
+					<form action="" method="">
+						<!-- Etape n°1 -->
+						<p class="grid-header">Etape n°1</p>
+						<div class="grid-body">
+							<div class="item-wrapper">
+								<div class="row mb-3">
+									<div class="col-md-8 mx-auto">
+										<div class="row showcase_row_area">
+											<div class="col-md-3 showcase_text_area">
+												<label>Ville de départ</label>
+											</div>
+											<div class="col-md-9 showcase_content_area">
+												<select class="custom-select">
+													<option selected="">Choisissez une ville</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+											</div>
+										</div>
+										<div class="row showcase_row_area">
+											<div class="col-md-3 showcase_text_area">
+												<label>Ville d'arrivée</label>
+											</div>
+											<div class="col-md-9 showcase_content_area">
+												<select class="custom-select">
+													<option selected="">Choisissez une ville</option>
+													<option value="1">One</option>
+													<option value="2">Two</option>
+													<option value="3">Three</option>
+												</select>
+											</div>
+										</div>
+										<div class="row showcase_row_area">
+											<div class="col-md-3 showcase_text_area">
+												<label>Autres options</label>
+											</div>
+											<div class="col-md-9 showcase_content_area">
+												<div class="form-group">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" class="form-check-input"> Adultes <i
+																class="input-frame"></i>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" class="form-check-input"> Enfants - bébés <i
+																class="input-frame"></i>
+														</label>
+													</div>
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" class="form-check-input"> Valises <i
+																class="input-frame"></i>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="offset-3 col-6">
+												<a href="/bookings/register/step2" class="btn btn-block btn-primary">Valider</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin Etape n°1 -->
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<% } %>
+
+<% if(step == 'step2' ) { %>
+	<div id="step2">
+		<div class="row">
+			<div class="col-12 py-5">
+				<h4>Liste des voitures disponibles</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="grid">
+					<form action="" method="post">
+						<!-- Etape n°1 -->
+						<p class="grid-header">Etape n°2</p>
+						<div class="grid-body">
+							<div class="item-wrapper">
+								<div class="row mb-3">
+									<div class="col-md-12 mx-auto">
+										<!-- Etape n°2 -->
+										<div class="row showcase_row_area">
+											<div class="offset-3 col-6">
+												<a href="/bookings/register/step3" class="btn btn-block btn-primary">Valider votre
+													choix</a>
+											</div>
+										</div>
+										<!-- Fin Etape n°2 -->
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Fin Etape n°1 -->
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<% } %>
+
+<% if(step == 'step3' ) { %>
+	<div id="step3">
+		<div class="row">
+			<div class="col-12 py-5">
+				<h4>Récapitulation de la réservation</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="grid">
+					<p class="grid-header">Etape n°3</p>
+					<div class="grid-body">
+						<div class="item-wrapper">
+							<div class="row mb-3">
+								<div class="col-md-8 mx-auto">
+									<h6 class="mb-3">Informations sur le trajet</h6>
+
+									<div class="form-group row showcase_row_area">
+										<div class="col-md-3 showcase_text_area">
+											<label for="">Ville de départ</label>
+										</div>
+										<div class="col-md-9 showcase_content_area">
+											<input type="text" class="form-control" id="" value="" readonly="readonly">
+										</div>
+									</div>
+									<div class="form-group row showcase_row_area">
+										<div class="col-md-3 showcase_text_area">
+											<label for="">Ville d'arrivée</label>
+										</div>
+										<div class="col-md-9 showcase_content_area">
+											<input type="email" class="form-control" id="" value="" readonly="readonly">
+										</div>
+									</div>
+									<div class="form-group row showcase_row_area">
+										<div class="col-md-3 showcase_text_area">
+											<label for="">Distance du trajet</label>
+										</div>
+										<div class="col-md-9 showcase_content_area">
+											<input type="email" class="form-control" id="" value="" readonly="readonly">
+										</div>
+									</div>
+									<div class="form-group row showcase_row_area">
+										<div class="col-md-3 showcase_text_area">
+											<label for="">Véhicule</label>
+										</div>
+										<div class="col-md-9 showcase_content_area">
+											<input type="email" class="form-control" id="" value="" readonly="readonly">
+										</div>
+									</div>
+
+									<h6 class="mb-3">Informations sur le client</h6>
+
+									<div class="form-group row showcase_row_area">
+										<div class="col-md-3 showcase_text_area">
+											<label for="">ID</label>
+										</div>
+										<div class="col-md-9 showcase_content_area">
+											<input type="email" class="form-control" id="" value="" readonly="readonly">
+										</div>
+									</div>
+									<div class="form-group row showcase_row_area">
+										<div class="col-md-3 showcase_text_area">
+											<label for="">Nom</label>
+										</div>
+										<div class="col-md-9 showcase_content_area">
+											<input type="email" class="form-control" id="" value="" readonly="readonly">
+										</div>
+									</div>
+									<div class="form-group row showcase_row_area">
+										<div class="col-md-3 showcase_text_area">
+											<label for="">Prénom</label>
+										</div>
+										<div class="col-md-9 showcase_content_area">
+											<input type="email" class="form-control" id="" value="" readonly="readonly">
+										</div>
+									</div>
+
+									<h6 class="mb-3">Coût du trajet</h6>
+
+									<div class="form-group row showcase_row_area">
+										<div class="col-md-1 showcase_text_area">
+											<h5>€</h5>
+										</div>
+										<div class="col-md-11 showcase_text_area">
+											<input type="text" class="form-control" value="1200">
+										</div>
+									</div>
+
+									<div class="form-group row showcase_row_area mt-4">
+										<div class="col-md-12 showcase_text_area">
+											<a href="/bookings/register/step4" class="btn btn-block btn-primary">Procéder au
+												paiement</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<% } %>
+
+<% if(step == 'step4' ) { %>
+	<div id="step4">
+		<div class="row">
+			<div class="col-12 py-5">
+				<h4>Paiement</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="grid">
+					<form action="" method="post">
+						<p class="grid-header">Etape n°4</p>
+						<div class="grid-body">
+							<div class="item-wrapper">
+								<div class="row mb-3">
+									<div class="col-md-12 mx-auto">
+										<!-- Etape n°4 -->
+										<div class="row showcase_row_area">
+											<div class="offset-3 col-6">
+												<a href="/booking/store" class="btn btn-block btn-primary">Sauvegarder la
+													réservation</a>
+											</div>
+										</div>
+										<!-- Fin Etape n°4 -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<% } %>
