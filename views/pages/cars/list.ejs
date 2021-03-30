@@ -1,0 +1,83 @@
+<div class="row">
+	<div class="col-12 py-5">
+		<h4>Gestion des clients</h4>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="grid">
+			<p class="grid-header">Liste des clients</p>
+			<div class="grid-body">
+				<div class="item-wrapper">
+					<div class="row mb-3">
+						<div class="col-md-12 mx-auto" ng-app="myapp">
+							<table class="table table-striped ng-data-table" style="width:100%">
+								<thead>
+									<tr>
+										<th>Matricule</th>
+										<th>Places</th>
+										<th>Constructeur</th>
+										<th>Modèle</th>
+										<th>Type</th>
+										<th>Essence</th>
+										<th>Couleur</th>
+										<th>Dispo.</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<% cars.forEach((car)=> { %>
+										<tr>
+											<td>
+												<%= car.vin %>
+											</td>
+											<td>
+												<%= car.seats %>
+											</td>
+											<td>
+												<%= car.manufacturer %>
+											</td>
+											<td>
+												<%= car.model %>
+											</td>
+											<td>
+												<%= car.type %>
+											</td>
+											<td>
+												<%= car.fuel %>
+											</td>
+											<td>
+												<%= car.color %>
+											</td>
+											<td>
+												<%= locked = car.locked == true ? 'Disponible' : 'Indisponible' %>
+											</td>
+											<td class="actions">
+												<div class="btn-group">
+													<button type="button" class="btn btn-default btn-xs dropdown-toggle"
+														data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+														Action
+													</button>
+													<div class="dropdown-menu">
+														<a class="dropdown-item" href="#">Affecter</a>
+														<a class="dropdown-item" href="/cars/lock/<%= car.id %>">
+															<%= action = car.locked == true ? 'Vérouiller' : 'Déverouiller' %>
+														</a>
+														<a class="dropdown-item" href="/cars/create">Création d'un nouveau véhicule</a>
+
+														<div class="dropdown-divider"></div>
+														<a class="dropdown-item text-danger" href="#">Supprimer</a>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<% }) %>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
