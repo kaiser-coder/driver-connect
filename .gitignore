@@ -131,11 +131,3 @@ lib-cov
 *.log
 *.out
 *.pid
-
-.editorconfig
-.eslintignore
-.eslintrc
-.npmrc
-app.js
-Gruntfile.js
-README.md
