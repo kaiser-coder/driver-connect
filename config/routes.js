@@ -34,6 +34,5 @@ module.exports.routes = {
   ***************************************************************************/
 	'/clients/state/:id': { action: 'clients/state' },
 	'/clients/delete/:id': { action: 'clients/delete' },
-	'/bookings/register/:step(step[1-4])': { action: 'bookings/register' }
-
+	'/cars/lock/:id': { action: 'cars/lock'},
 };
