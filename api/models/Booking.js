@@ -9,10 +9,10 @@ module.exports = {
 
   attributes: {
 		departure : { type: 'string', required: true },
-		options   : { type: 'json', required  : false },
 		arrival   : { type: 'string', required: true },
+		options   : { type: 'json', required  : false },
 		car       : { type: 'string', required: true},
-		client    : {type : 'json', required  : true},
+		client    : {type : 'string', required  : true},
 		cost      : {type : 'json', required  : true},
 		payment_id: {type : 'string', required: true}
   },
