@@ -1,0 +1,99 @@
+<div class="row">
+   <div class="col-12 py-5">
+      <h4>Formulaire d'ajout de nouveaux véhicules</h4>
+   </div>
+</div>
+<div class="row">
+   <div class="col-lg-12">
+      <div class="grid">
+         <form action="/cars/store" method="POST">
+            <p class="grid-header">Etape n°1</p>
+            <div class="grid-body">
+               <div class="item-wrapper">
+                  <div class="row mb-3">
+                     <div class="col-md-8 mx-auto">
+                        <div class="row showcase_row_area">
+                           <div class="col-md-3 showcase_text_area">
+                              <label>Matricule</label>
+                           </div>
+                           <div class="col-md-9 showcase_content_area">
+                              <input type="text" name="vin" class="form-control">
+                           </div>
+                        </div>
+                        <div class="row showcase_row_area">
+                           <div class="col-md-3 showcase_text_area">
+                              <label>Nombre de place</label>
+                           </div>
+                           <div class="col-md-9 showcase_content_area">
+                              <input type="number" name="seats" id="" class="form-control">
+                           </div>
+                        </div>
+                        <div class="row showcase_row_area">
+                           <div class="col-md-3 showcase_text_area">
+                              <label>Constructeur</label>
+                           </div>
+                           <div class="col-md-9 showcase_content_area">
+                             <input type="text" name="manufacturer" id="" class="form-control">
+                           </div>
+                        </div>
+                        <div class="row showcase_row_area">
+                           <div class="col-md-3 showcase_text_area">
+                              <label>Modèle</label>
+                           </div>
+                           <div class="col-md-9 showcase_content_area">
+                             <input type="text" name="model" id="" class="form-control">
+                           </div>
+                        </div>
+                        <div class="row showcase_row_area">
+                           <div class="col-md-3 showcase_text_area">
+                              <label>Type</label>
+                           </div>
+                           <div class="col-md-9 showcase_content_area">
+										<select name="type" class="custom-select">
+											<option selected="" value="">Choisissez un type</option>
+											<option value="moto">Moto</option>
+											<option value="van">Van</option>
+											<option value="hatchback">Hatchback</option>
+											<option value="minivan">Minivan</option>
+											<option value="crew cab pickup">Crew Cab Pickup</option>
+										</select>
+                           </div>
+                        </div>
+                        <div class="row showcase_row_area">
+                           <div class="col-md-3 showcase_text_area">
+                              <label>Essence</label>
+                           </div>
+                           <div class="col-md-9 showcase_content_area">
+                             <div class="form-group">
+										  <select name="fuel" class="custom-select">
+												<option selected="" value="">Choisissez une valeur</option>
+												<option value="diesel">Diesel</option>
+												<option value="electrique">Electrique</option>
+												<option value="hybrid">Hybride</option>
+										  </select>
+									  </div>
+                           </div>
+                        </div>
+                        <div class="row showcase_row_area">
+                           <div class="col-md-3 showcase_text_area">
+                              <label>Couleur</label>
+                           </div>
+                           <div class="col-md-9 showcase_content_area">
+                             <div class="form-group">
+										  <input type="text" name="color" class="form-control">
+									  </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="offset-3 col-6">
+										<button type="submit" class="btn btn-sm btn-primary btn-block">Enregistrer</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>
