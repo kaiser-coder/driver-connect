@@ -1,0 +1,155 @@
+<div class="row">
+	<div class="col-12 py-5">
+		<h4>Gestion des chauffeurs</h4>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="grid">
+			<p class="grid-header">Système de gestion chauffeurs</p>
+			<div class="grid-body">
+				<div class="item-wrapper">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item" role="group">
+							<a class="nav-link active text-dark" id="group-tab" data-toggle="tab" href="#group" role="tab" aria-controls="group"
+								aria-selected="true">Gérer les groupes</a>
+						</li>
+						<li class="nav-item" role="driver">
+							<a class="nav-link text-dark" id="driver-tab" data-toggle="tab" href="#driver" role="tab" aria-controls="driver"
+								aria-selected="false">Gérer les chauffeurs</a>
+						</li>
+						<li class="nav-item" role="email">
+							<a class="nav-link text-dark" id="email-tab" data-toggle="tab" href="#email" role="tab" aria-controls="email"
+								aria-selected="false">Envoyer un email</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a class="nav-link text-dark" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+								aria-selected="false">Imprimer la facture</a>
+						</li>
+						<li class="nav-item" role="presentation">
+							<a class="nav-link text-dark" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+								aria-selected="false">Blacklist</a>
+						</li>
+					</ul>
+					<div class="tab-content mt-5" id="myTabContent"  ng-app="myapp">
+						<div class="tab-pane fade show active" id="group" role="tabpanel" aria-labelledby="group-tab">
+							<div class="col-md-12 mx-auto">
+								<table class="table table-striped ng-data-table" style="width:100%">
+									<thead>
+										<tr>
+											<th>Nom</th>
+											<th>Créé le</th>
+											<th>Modifié le</th>
+											<th>Chauffeurs</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<% groups.forEach((group)=> { %>
+											<tr>
+												<td><%= group.name %></td>
+												<td><%= group.createdAt %></td>
+												<td><%= group.updatedAt %></td>
+												<td>
+
+												</td>
+												<td class="actions">
+													<div class="btn-group">
+														<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+															Action
+														</button>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="#">Envoyer un push</a>
+															<a class="dropdown-item" href="#">Tarif</a>
+
+															<a class="dropdown-item" href="/clients/state/<%= client.id %>">
+																<%= action=client.state=='active' ? 'Désactiver' : 'Activer' %>
+															</a>
+
+															<a class="dropdown-item" href="#">Envoyer un email</a>
+															<div class="dropdown-divider"></div>
+															<%- partial('../../partials/confirm_delete.ejs') %>
+														</div>
+													</div>
+												</td>
+											</tr>
+											<% }) %>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="driver" role="driver" aria-labelledby="driver-tab">
+							<div class="col-md-12 mx-auto">
+								<table class="table table-striped ng-data-table" style="width:100%">
+									<thead>
+										<tr>
+											<th>Nom</th>
+											<th>Prénom</th>
+											<th>Tél.</th>
+											<th>Adresse</th>
+											<th>Ajouté le</th>
+											<th>Modifié le</th>
+											<th>Statut</th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+										<% drivers.forEach((driver)=> { %>
+											<tr>
+												<td><%= driver.firstName %></td>
+												<td><%= driver.lastName %></td>
+												<td><%= driver.phoneNumber %></td>
+												<td><%= driver.address %></td>
+												<td><%= driver.createdAt %></td>
+												<td><%= driver.updatedAt %></td>
+												<td><%= driver.state %></td>
+												<td class="actions">
+													<div class="btn-group">
+														<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown"
+															aria-haspopup="true" aria-expanded="false">
+															Action
+														</button>
+														<div class="dropdown-menu">
+															<a class="dropdown-item" href="#">Envoyer un push</a>
+															<a class="dropdown-item" href="#">Tarif</a>
+
+															<a class="dropdown-item" href="/clients/state/<%= client.id %>">
+																<%= action=client.state=='active' ? 'Désactiver' : 'Activer' %>
+															</a>
+
+															<a class="dropdown-item" href="#">Envoyer un email</a>
+															<div class="dropdown-divider"></div>
+															<%- partial('../../partials/confirm_delete.ejs') %>
+														</div>
+													</div>
+												</td>
+											</tr>
+										<% }) %>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div class="tab-pane fade" id="email" role="email" aria-labelledby="email-tab">
+							<form class="col-md-12 mx-auto" method="POST">
+								<div class="row form-group">
+									<label for="" class="col-md-3">Objet</label>
+									<input type="text" name="" id="" class="col-md-9 form-control">
+								</div>
+								<div class="row form-group">
+									<label for="" class="col-md-3">Contenu</label>
+									<textarea name="" id="" cols="30" rows="10" class="col-md-9 form-control"></textarea>
+								</div>
+								<div class="row">
+									<input type="submit" value="Envoyer" class="offset-3 col-md-6 btn btn-block btn-primary">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
